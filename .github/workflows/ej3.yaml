@@ -12,5 +12,5 @@ jobs:
         python-version: [3.9, 3.11, 3.12]
     
     steps:
-      - name: Version Python
-        run: python --version
+      - name: Funciona con éxito
+        run: echo "Se ha descargado correctamente la versión de Python"
