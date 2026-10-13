@@ -1,7 +1,6 @@
 name: Ejercicio Clase
 
 on:
-  runs-on: $RUNS_ON
   workflow_dispatch:
 
 jobs:
