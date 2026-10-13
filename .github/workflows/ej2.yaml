@@ -14,5 +14,3 @@ jobs:
           echo "La contraseña utilizada es: $PASSWORD"
         env:
           PASSWORD: echo "${{ secrets.PASSWORD }}"
-        run: |
-          echo "La contraseña utilizada es: $PASSWORD"
