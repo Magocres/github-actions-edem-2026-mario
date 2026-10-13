@@ -3,7 +3,6 @@ name: Event PR - Single Job
 on:
   pull_request:
 
-    
 jobs:
   hello-world:
     runs-on: ubuntu-latest

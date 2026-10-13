@@ -12,7 +12,7 @@ on:
         type: string
         description: Cualquier valor
         default: ""
-        required: false    
+        required: false
 
 jobs:
   hello-world:

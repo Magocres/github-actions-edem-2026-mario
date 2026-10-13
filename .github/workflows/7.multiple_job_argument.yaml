@@ -12,7 +12,7 @@ on:
         type: string
         description: Cualquier valor
         default: ""
-        required: false          
+        required: false
 
 jobs:
   hello-world:
@@ -28,4 +28,4 @@ jobs:
     - name: Fist Step
       run: echo "Hello World"
     - name: Second Step
-      run:  echo ${{ github.event.inputs.debug_mode }}          
+      run:  echo ${{ github.event.inputs.debug_mode }}
