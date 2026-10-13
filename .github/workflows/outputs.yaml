@@ -1,0 +1,6 @@
+jobs:
+  say_hello:
+    name: "Let's greet the user!"
+    runs-on: ubuntu-latest
+    steps:
+      - id: get-timeThe time from the early step is: ${{ steps.get-time.outputs.time }}"
