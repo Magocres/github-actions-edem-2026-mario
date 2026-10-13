@@ -15,3 +15,5 @@ jobs:
         run: |
           echo "Iniciando sesión con el usuario: $USUARIO"
           echo "La contraseña utilizada es: $PASSWORD"
+      - name: Mostrar mensaje de éxito
+        run: echo "¡Inicio de sesión simulado con éxito!"
