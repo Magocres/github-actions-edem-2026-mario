@@ -2,6 +2,7 @@ name: Ejercicio Clase
 
 on:
   runs-on: $RUNS-ON
+  workflow_dispatch:
 
 jobs:
   say_hello:
