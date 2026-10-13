@@ -1,4 +1,4 @@
-name: Ejercicio Clase
+name: Ejercicio 1
 on:
   workflow_dispatch:
 jobs:

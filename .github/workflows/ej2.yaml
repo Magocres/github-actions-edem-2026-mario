@@ -1,0 +1,20 @@
+name: Ejercicio 2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  simular-login:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Simular inicio de sesión
+        run: |
+          echo "Iniciando sesión con el usuario: $USUARIO"
+          echo "La contraseña utilizada es: $PASSWORD"
+        env:
+          USUARIO: "admin@miempresa.com"
+          PASSWORD: ${{ secrets.CONTRASENYA }}
