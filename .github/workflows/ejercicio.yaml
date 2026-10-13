@@ -1,8 +1,6 @@
 name: Ejercicio Clase
-
 on:
   workflow_dispatch:
-
 jobs:
   say_hello:
     name: "Let's greet the user!"
@@ -10,8 +8,8 @@ jobs:
     steps:
       - run: echo "Hello1 there is ${{ vars.RUNS_ON }}!"
     
-    second_job:
-      name: "Let's greet the user!"
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Hello2 there is ${{ vars.RUNS_ON }}!"
+  second_job:
+    name: "Let's greet the user!"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello2 there is ${{ vars.RUNS_ON }}!"
