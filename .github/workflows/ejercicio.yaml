@@ -8,10 +8,10 @@ jobs:
     name: "Let's greet the user!"
     runs-on: $RUNS-ON
     steps:
-      - run: echo "Hello1 there is ${{RUNS-ON}}!"
+      - run: echo "Hello1 there is ${{RUNS_ON}}!"
     
     second_job:
       name: "Let's greet the user!"
       runs-on: $RUNS-ON
       steps:
-        - run: echo "Hello2 there is ${{RUNS-ON}}!"
+        - run: echo "Hello2 there is ${{RUNS_ON}}!"
