@@ -12,6 +12,7 @@ jobs:
       run: echo "Hello World"
   bye-world:
     runs-on: ubuntu-latest
+    needs: hello-world
     steps:
     - name: Fist Step
       run: echo "Hello World"
