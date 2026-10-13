@@ -15,6 +15,3 @@ jobs:
         run: |
           echo "Iniciando sesión con el usuario: $USUARIO"
           echo "La contraseña utilizada es: $PASSWORD"
-        env:
-          USUARIO: "admin@miempresa.com"
-          PASSWORD: ${{ secrets.CONTRASENYA }}
