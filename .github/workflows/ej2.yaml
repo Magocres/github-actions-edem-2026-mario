@@ -11,9 +11,8 @@ jobs:
 
       - name: Simular inicio de sesión
         run: |
-          echo "Iniciando sesión con el usuario: $USUARIO"
           echo "La contraseña utilizada es: $PASSWORD"
         env:
           PASSWORD: echo "${{ secrets.PASSWORD }}"
-      - name: Mostrar mensaje de éxito
-        run: echo "¡Inicio de sesión simulado con éxito!"
+        run: |
+          echo "La contraseña utilizada es: $PASSWORD"
