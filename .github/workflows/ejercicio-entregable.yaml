@@ -10,7 +10,6 @@ on:
         options:
           - "sí"
           - "no"
-        default: "sí"
 
 jobs:
   ci_security:
