@@ -1,3 +1,4 @@
+
 name: "Ejercicio Entregable GitHub Actions"
 
 on:
@@ -8,21 +9,24 @@ on:
         required: true
         type: choice
         options:
-          - sí
-          - no
-        default: 'sí'
+          - "sí"
+          - "no"
+        default: "sí"
 
 jobs:
   ci_security:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.12'
-      
+          python-version: "3.12"
+
       - name: Validación del JSON
-        run: /usr/bin/python3 -c "import json; json.load(open('ventas.json'))"
+        run: python -c "import json; json.load(open('ventas.json'))"
 
       - name: Simulador Escaneo de Seguridad
-        if: github.event.inputs.test_seguridad == 'sí'
+        if: ${{ inputs.test_seguridad == 'sí' }}
         run: echo "Se ha completado con éxito el Escaneo de Seguridad"
