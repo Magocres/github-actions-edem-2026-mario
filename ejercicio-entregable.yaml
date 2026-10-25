@@ -1,4 +1,3 @@
-
 name: "Ejercicio Entregable GitHub Actions"
 
 on:
@@ -15,14 +14,12 @@ on:
 
 jobs:
   ci_security:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Configurar Python
-        uses: actions/setup-python@v6
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.12"
+          python-version: '3.9'
 
       - name: Validación del JSON
         run: python -c "import json; json.load(open('ventas.json'))"
