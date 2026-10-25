@@ -14,12 +14,12 @@ on:
 
 jobs:
   ci_security:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Validación del JSON
-        run: python3 -c "import json; json.load(open('ventas.json'))"
+        run: /usr/bin/python3 -c "import json; json.load(open('ventas.json'))"
 
       - name: Simulador Escaneo de Seguridad
         if: github.event.inputs.test_seguridad == 'sí'
