@@ -14,7 +14,7 @@ on:
 
 jobs:
   ci_security:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
@@ -25,9 +25,7 @@ jobs:
           python-version: '3.12'
 
       - name: Validación del JSON
-        run: |
-          # Verificamos que el archivo existe antes de validarlo
-          python3 -c "import json; json.load(open('ventas.json'))"
+        run: python -c "import json; json.load(open('ventas.json'))"
 
       - name: Simulador Escaneo de Seguridad
         if: ${{ inputs.test_seguridad == 'sí' }}
